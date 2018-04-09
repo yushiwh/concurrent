@@ -1,6 +1,6 @@
-/**
+package aio; /**
  * Copyright (C), 2018-2020, 998电商集团
- * FileName: Client
+ * FileName: aio.Client
  * Author:   yushi
  * Date:     2018/4/9 15:16
  * Description: 客服端

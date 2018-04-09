@@ -1,6 +1,6 @@
-/**
+package aio; /**
  * Copyright (C), 2018-2020, 998电商集团
- * FileName: Server
+ * FileName: aio.Server
  * Author:   yushi
  * Date:     2018/4/9 15:13
  * Description: Aio的服务器端
@@ -41,7 +41,7 @@ public class Server {
             channel = AsynchronousServerSocketChannel.open(channelGroup);
             //绑定地址
             channel.bind(new InetSocketAddress(port));
-            System.out.println("server start, port：" + port);
+            System.out.println("Server start, port：" + port);
             channel.accept(this, new ServerCompletionHandler());
             Thread.sleep(Integer.MAX_VALUE);
         } catch (Exception e) {

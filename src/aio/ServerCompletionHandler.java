@@ -1,6 +1,6 @@
-/**
+package aio; /**
  * Copyright (C), 2018-2020, 998电商集团
- * FileName: ServerCompletionHandler
+ * FileName: aio.ServerCompletionHandler
  * Author:   yushi
  * Date:     2018/4/9 15:15
  * Description: 服务器端Handler
@@ -36,9 +36,9 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
             @Override
             public void completed(Integer resultSize, ByteBuffer attachment) {
                 attachment.flip();
-                System.out.println("Server->" + "收到客户端发送的数据长度为：" + resultSize);
+                System.out.println("aio.Server->" + "收到客户端发送的数据长度为：" + resultSize);
                 String data = new String(buffer.array()).trim();
-                System.out.println("Server->" + "收到客户端发送的数据为：" + data);
+                System.out.println("aio.Server->" + "收到客户端发送的数据为：" + data);
                 String response = "服务器端响应了客户端。。。。。。";
                 write(channel, response);
             }
