@@ -9,6 +9,9 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+/**
+ * 需要下载netty-all-5.0.0.Alpha2.jar
+ */
 public class Server {
     private int port;
 
