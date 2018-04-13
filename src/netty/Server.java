@@ -35,6 +35,7 @@ public class Server {
                         //配置具体的数据处理方式
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
+
                             socketChannel.pipeline().addLast(new ServerHandler());
                         }
                     })
