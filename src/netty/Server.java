@@ -20,6 +20,7 @@ public class Server {
     }
 
     public void run() {
+        //固定代码，用户服务器的初始化
         //用于处理服务器端接收客户端连接
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         //进行网络通信（读写）
