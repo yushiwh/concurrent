@@ -58,11 +58,14 @@ public class Server {
                     .option(ChannelOption.SO_RCVBUF, 32 * 1024)
                     //保持连接
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
+            //进行绑定端口
             ChannelFuture future = bootstrap.bind(port).sync();
+            //等待关闭
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+            //资源进行释放
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
